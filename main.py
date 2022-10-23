@@ -32,6 +32,8 @@ commsSocket = socket.socket()
 #commsSocket.bind((IP, PORT))
 commsSocket.bind(("0.0.0.0", 8091)) # Use '0.0.0.0' for all or find out target IP
 commsSocket.listen(0)
+# Socket accept() will block for a maximum of 1 second.  If you omit this, it blocks indefinitely, waiting for a connection.
+commsSocket.settimeout(5) # Timeout in seconds
 logger.info("Socket setup compete")
 
 # Server Loop
@@ -39,10 +41,15 @@ while True:
     logger.info("Waiting for connection.")
 
     # Connect
-    client, addr = commsSocket.accept()
-    logger.info("Client: " + client)
-    logger.info("Address: " + addr)
-    logger.info("Connection accepted.")
+    try:
+        client, addr = commsSocket.accept()
+        logger.info("Client: " + client)
+        logger.info("Address: " + addr)
+        logger.info("Connection accepted.")
+    except TimeoutError as error:
+        logger.warning("Socket timed out!: " + str(error))
+        continue
+    
     # client handling code
 
     # Receive
@@ -53,10 +60,9 @@ while True:
         if len(content) == 0:
             logger.critical("Content empty")
             break
- 
+
         else:
-            logger.inof("Content:" + content)
+            logger.info("Content:" + content)
 
     logger.warning("Closing connection.")
     client.close()
-
