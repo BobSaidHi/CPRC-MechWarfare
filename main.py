@@ -6,20 +6,26 @@
 import socket
 
 # Config
-IP = '0.0.0.0' # Use '0.0.0.0' for all or find out target IP
-PORT = 8090
+#TARGET_IP = 0.0.0.0' # Use '0.0.0.0' for all or figure out ip address of target
+#PORT = 8090
+TARGET_IP = '0.0.0.0' # Use '0.0.0.0' for all
+PORT = 8091
 
 # Setup
 commsSocket = socket.socket()
 #commsSocket.bind((IP, PORT))
-commsSocket.bind(("0.0.0.0", 8090)) # Use '0.0.0.0' for all or find out target IP
+commsSocket.bind(("0.0.0.0", 8091))
 commsSocket.listen(0)
 
+# Server Loop
 while True:
  
-    client, addr = s.accept()
+    client, addr = commsSocket.accept()
+    print(client)
+    print(addr)
     # client handling code
 
+    # Receive
     while True:
         content = client.recv(32)
  
