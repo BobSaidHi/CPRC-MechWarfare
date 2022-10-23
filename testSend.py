@@ -52,18 +52,12 @@ while True:
     
     # client handling code
 
-    # Receive
-    # For testing only
+    # Send
     while True:
-        logger.info("Waiting for content.")
-        content = client.recv(32)
-        
-        if len(content) == 0:
-            logger.critical("Content empty")
-            break
-
-        else:
-            logger.info("Content:" + content)
+        # https://pythontic.com/modules/socket/send
+        data = "Hello ESP32!"
+        logger.info("Data: " + data)
+        client.send(data.encode(encoding="utf-8"))
 
     logger.warning("Closing connection.")
     client.close()
