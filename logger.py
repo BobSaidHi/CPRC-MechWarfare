@@ -3,7 +3,7 @@
 # COMPONENT:  Mech Command Server
 # Project:    Mech Warfare 2022
 
-# Author:    @BoBSaidHi - https://github.com/BobSaidHi
+# Author:    @BobSaidHi - https://github.com/BobSaidHi
 # Version:   0.0.0.1.2
 # Version Name:  INDEV 1.2
 # Updated:   2022-10-22T5:00 PM PST
