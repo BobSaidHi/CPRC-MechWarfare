@@ -53,6 +53,7 @@ while True:
     # client handling code
 
     # Receive
+    # For testing only
     while True:
         logger.info("Waiting for content.")
         content = client.recv(32)
