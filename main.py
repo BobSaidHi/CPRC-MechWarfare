@@ -14,7 +14,7 @@ PORT = 8091
 # Setup
 commsSocket = socket.socket()
 #commsSocket.bind((IP, PORT))
-commsSocket.bind(("0.0.0.0", 8091))
+commsSocket.bind(("0.0.0.0", 8091)) # Use '0.0.0.0' for all or find out target IP
 commsSocket.listen(0)
 
 # Server Loop
