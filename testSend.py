@@ -1,6 +1,14 @@
+# Mech Warfare 2022
 #
+# Version:  0.1.1
+# Updated:  20221027
+#
+# Description
+# This file is a modified version of testRecieve.py version 0.1.  It has been modified to send data over WiFi.
+# We used the hotspot feature in Windows to create a WiFi AP.  Ideally we would have a PC with a WiFi chip that supports hosting networks, but mine does not.  I am looking at alternative WiFi hotspot programs.
+#
+# Resources
 # https://techtutorialsx.com/2018/05/17/esp32-arduino-sending-data-with-socket-client/
-#
 
 # Imports
 import socket
@@ -18,19 +26,19 @@ logger.debug("Starting configuration")
 #TARGET_IP = '0.0.0.0' # Use '0.0.0.0' for all
 #PORT = 8090
 TARGET_IP = '0.0.0.0' # Use '0.0.0.0' for all
-PORT = 8091
+PORT = 8091 # Could probably change back if we wanted
 
 if(TARGET_IP == "0.0.0.0"):
-    logger.warning("Accepting sockets from all IPs!")
+    logger.warning("Accepting sockets from all IPs!") # Warn if TARGET_IP = '0.0.0.0' :(
 
-logger.info("TARGET_IP: " + TARGET_IP)
-logger.info("PORT: " + str(PORT))
+logger.info("TARGET_IP: " + TARGET_IP) # Log Network config
+logger.info("PORT: " + str(PORT)) # Log Network config
 
 # Setup
 logger.debug("Starting socket setup")
 commsSocket = socket.socket()
 commsSocket.bind((TARGET_IP, PORT))
-#commsSocket.bind(("0.0.0.0", 8091)) # @deprectaed
+#commsSocket.bind(("0.0.0.0", 8091)) # @deprecated
 commsSocket.listen(0)
 # Socket accept() will block for a maximum of 1 second.  If you omit this, it blocks indefinitely, waiting for a connection.
 commsSocket.settimeout(5) # Timeout in seconds
