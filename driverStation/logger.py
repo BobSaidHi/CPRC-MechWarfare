@@ -5,7 +5,7 @@
 
 # Author:    @BobSaidHi - https://github.com/BobSaidHi
 # Version:   0.0.0.1.2
-# Version Name:  INDEV 1.2
+# Version Name:  INDEV 1.3
 # Updated:   2022-10-22T5:00 PM PST
 
 # From FRC Scouting Suite (reboot) / FRC Scouting Server / api-core / basic
@@ -26,20 +26,24 @@ import os
 logger = logging.getLogger("MechWarfareCommandServer")
 logger.setLevel(logging.DEBUG)
 
+# Config
+loggingFileLocation = "driverStation/logs"
+
 # Create & configure logging file handler
 def CreateLoggingFh():
     Current_time = datetime.now().strftime('%Y-%m-%d__%H-%M-%S')
-    fh = logging.FileHandler('logs/MechWarfareCommandServer-' + Current_time + '.log')
+    fh = logging.FileHandler(loggingFileLocation + '/MechWarfareCommandServer-' + Current_time + '.log')
     fh.setLevel(logging.DEBUG) # CONFIG - Logging level (to file)
     formatterFh = logging.Formatter('%(asctime)s - %(pathname)s - %(name)s - %(levelname)s - %(message)s', datefmt='%m-%d-%Y %I:%M:%S %p')
     fh.setFormatter(formatterFh)
     logger.addHandler(fh)
     logger.debug("Log to file handler created!")
+    logger.debug("loggingFileLocation: " + loggingFileLocation)
 # Create a 'logs' directory if missing
 try:
     CreateLoggingFh()
 except(FileNotFoundError):
-    os.mkdir('logs')
+    os.mkdir(loggingFileLocation)
     CreateLoggingFh()
     logger.info("Couldn't find log directory and created a new one instead.")
     pass
