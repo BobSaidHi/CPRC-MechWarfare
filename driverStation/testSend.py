@@ -74,6 +74,7 @@ while True:
         except ConnectionResetError as error:
             logger.warning("Connection Reset!: " + str(error))
             break            
+        #TODO: Add timeouts?
 
     logger.warning("Closing connection.")
     client.close()

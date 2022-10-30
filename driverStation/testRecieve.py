@@ -41,7 +41,9 @@ commsSocket = socket.socket()
 commsSocket.bind(("0.0.0.0", 8091)) # @deprecated TODO Change back to use config # Use '0.0.0.0' for all or find out target IP
 commsSocket.listen(0)
 # Socket accept() will block for a maximum of 1 second.  If you omit this, it blocks indefinitely, waiting for a connection.
-commsSocket.settimeout(5) # Timeout in seconds
+socketTimeout = 5 # CONFIG
+logger.debug("socketTimeout= " + str(socketTimeout))
+commsSocket.settimeout(socketTimeout) # Timeout in seconds
 logger.info("Socket setup compete")
 
 # Server Loop
@@ -59,26 +61,32 @@ while True:
         continue
 
     # client handling code
+    # Socket recv() will block for a maximum of the specified amount of seconds.  If you omit this, it blocks indefinitely, waiting for packets.
+    # Also, if the ESP32 disconnects and reconnects, recv() may block indefinitely.
+    clientTimeout = 2 # CONFIG
+    logger.debug("clientTimeout= " + str(clientTimeout))
+    client.settimeout(clientTimeout)
 
     # Receive
-    # For testing only
     while True:
         logger.info("Waiting for content.")
         try:
             content = client.recv(32)
-        except ConnectionAbortedError as error:
+        except ConnectionAbortedError as error: # Windows mobile hotspot disabled
             logger.warning("Connection Aborted!: " + str(error))
             client.close
             break
-        except ConnectionResetError as error:
+        except ConnectionResetError as error: # Windows mobile hotspot disabled part 2
             logger.warning("Connection Reset!: " + str(error))
-            break            
+            break         
+        except socket.timeout as error: # ESP32 looses power
+            logger.warning("Receive data timed out!: " + str(error))
+            break    
         
-        if len(content) == 0:
+        if len(content) == 0: # ESP32 closes connection
             logger.critical("Content empty")
             break
-
-        else:
+        else: # It works!
             logger.info("Content:" + str(content))
 
     logger.warning("Closing connection.")
