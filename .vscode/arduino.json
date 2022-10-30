@@ -1,0 +1,5 @@
+{
+    "sketch": "esp32\\ESP32Wifi\\ESP32Wifi.ino",
+    "configuration": "LoopCore=1,EventsCore=1,PartitionScheme=default,CPUFreq=240,FlashFreq=80,FlashSize=4M,UploadSpeed=921600,DebugLevel=none,EraseFlash=none",
+    "board": "esp32:esp32:featheresp32"
+}

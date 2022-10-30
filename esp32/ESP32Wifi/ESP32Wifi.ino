@@ -1,7 +1,12 @@
 #include <WiFi.h>
- 
-const char* ssid = ""; // CONFIG
-const char* password =  ""; // CONFIG
+#include <WiFi_secrets.h>
+
+// See https://www.andreagrandi.it/2020/12/16/how-to-safely-store-arduino-secrets/
+#define SECRET_SSID "myessid"
+#define SECRET_PASS "mypassword"
+
+const char* ssid = SECRET_SSID; // CONFIG
+const char* password =  SECRET_PASS; // CONFIG
  
 const uint16_t port = 8091;
 const char * host = "192.168.137.1";
