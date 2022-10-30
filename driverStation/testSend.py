@@ -54,7 +54,7 @@ while True:
         logger.info("Client: " + client)
         logger.info("Address: " + addr)
         logger.info("Connection accepted.")
-    except TimeoutError as error:
+    except socket.timeout as error:
         logger.warning("Socket timed out!: " + str(error))
         continue
     
@@ -65,7 +65,15 @@ while True:
         # https://pythontic.com/modules/socket/send
         data = "Hello ESP32!"
         logger.info("Data: " + data)
-        client.send(data.encode(encoding="utf-8"))
+        try:
+            client.send(data.encode(encoding="utf-8"))
+        except ConnectionAbortedError as error:
+            logger.warning("Connection Aborted!: " + str(error))
+            client.close
+            break
+        except ConnectionResetError as error:
+            logger.warning("Connection Reset!: " + str(error))
+            break            
 
     logger.warning("Closing connection.")
     client.close()

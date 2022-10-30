@@ -51,27 +51,35 @@ while True:
     # Connect
     try:
         client, addr = commsSocket.accept()
-        logger.info("Client: " + client)
-        logger.info("Address: " + addr)
+        logger.info("Client: " + str(client))
+        logger.info("Address: " + str(addr))
         logger.info("Connection accepted.")
-    except TimeoutError as error:
+    except socket.timeout as error:
         logger.warning("Socket timed out!: " + str(error))
         continue
-    
+
     # client handling code
 
     # Receive
     # For testing only
     while True:
         logger.info("Waiting for content.")
-        content = client.recv(32)
+        try:
+            content = client.recv(32)
+        except ConnectionAbortedError as error:
+            logger.warning("Connection Aborted!: " + str(error))
+            client.close
+            break
+        except ConnectionResetError as error:
+            logger.warning("Connection Reset!: " + str(error))
+            break            
         
         if len(content) == 0:
             logger.critical("Content empty")
             break
 
         else:
-            logger.info("Content:" + content)
+            logger.info("Content:" + str(content))
 
     logger.warning("Closing connection.")
     client.close()
