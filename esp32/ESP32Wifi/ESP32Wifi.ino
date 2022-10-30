@@ -1,7 +1,7 @@
 #include <WiFi.h>
  
-const char* ssid = "MechWarfare";
-const char* password =  "1q8#B12n^6L";
+const char* ssid = ""; // CONFIG
+const char* password =  ""; // CONFIG
  
 const uint16_t port = 8091;
 const char * host = "192.168.137.1";
@@ -35,6 +35,8 @@ void loop()
           Serial.println("Connection to host failed"); 
           return;
       }
-      Serial.println("Connected to server successful!");
     }
+    Serial.println("Connected to server successful!");
+    client.println("Hello!");
+    delay(500);
 }
