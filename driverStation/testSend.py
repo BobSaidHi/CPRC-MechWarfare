@@ -23,8 +23,6 @@ logger.info("Logger started.")
 
 # Config
 logger.debug("Starting configuration")
-#TARGET_IP = '0.0.0.0' # Use '0.0.0.0' for all
-#PORT = 8090
 TARGET_IP = '0.0.0.0' # Use '0.0.0.0' for all
 PORT = 8091 # Could probably change back if we wanted
 

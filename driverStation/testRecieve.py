@@ -23,10 +23,8 @@ logger.info("Logger started.")
 
 # Config
 logger.debug("Starting configuration")
-#TARGET_IP = '0.0.0.0' # Use '0.0.0.0' for all or figure out IP address of target
-#PORT = 8090
-TARGET_IP = '0.0.0.0' # Use '0.0.0.0' for all
-PORT = 8091 # Could probably change back if we wanted
+TARGET_IP = '0.0.0.0' # Use '0.0.0.0' for all or figure out IP address of target
+PORT = 8091 # Could probably change back t 8090 if we wanted
 
 if(TARGET_IP == "0.0.0.0"):
     logger.warning("Accepting sockets from all IPs!") # Warn if TARGET_IP = '0.0.0.0' :(
@@ -37,8 +35,7 @@ logger.info("PORT: " + str(PORT)) # Log Network config
 # Setup
 logger.debug("Starting socket setup")
 commsSocket = socket.socket()
-#commsSocket.bind((IP, PORT)) # TODO Change back to use config
-commsSocket.bind(("0.0.0.0", 8091)) # @deprecated TODO Change back to use config # Use '0.0.0.0' for all or find out target IP
+commsSocket.bind((TARGET_IP, PORT)) # @deprecated TODO Change back to use config # Use '0.0.0.0' for all or find out target IP
 commsSocket.listen(0)
 # Socket accept() will block for a maximum of 1 second.  If you omit this, it blocks indefinitely, waiting for a connection.
 socketTimeout = 5 # CONFIG
