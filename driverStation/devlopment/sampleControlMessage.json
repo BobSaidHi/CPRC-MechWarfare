@@ -1,0 +1,16 @@
+{
+    "joystickLeft": {
+        "x": 0.0,
+        "y": 0.0
+    },
+    "joystickRight": {
+        "x": 0.0,
+        "y": 0.0
+    },
+    "buttons": {
+        "a": false,
+        "b": false,
+        "c": false,
+        "d": false
+    }
+}
