@@ -14,6 +14,10 @@
 import socket
 import logging
 
+# Start Logger
+logger = logging.getLogger("MechWarfareCommandServer")
+logger.setLevel(logging.DEBUG)
+
 TARGET_IP = '0.0.0.0' # Use '0.0.0.0' for all
 PORT = 8091 # Could probably change back if we wanted
 
