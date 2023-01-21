@@ -1,0 +1,6 @@
+ipconfig
+
+TODO: Make ESP32 auto-reconnect to network
+
+Note: ESP32 is only working on 2.4 Ghz right now.
+
