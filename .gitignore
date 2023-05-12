@@ -153,3 +153,4 @@ cython_debug/
 *.pcapng
 esp32/ESP32Wifi/WiFiPassword.txt
 esp32/ESP32Wifi/WiFi_secrets.h
+.vscode/c_cpp_properties.json
