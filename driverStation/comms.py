@@ -10,9 +10,9 @@
 # https://techtutorialsx.com/2018/05/17/esp32-arduino-sending-data-with-socket-client/
 
 # Imports
-import socket
-import logging
 import logger # Apparently importing is enough to run the setup script
+import logging
+import socket
 
 class Communication:
     
