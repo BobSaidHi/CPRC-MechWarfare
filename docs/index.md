@@ -8,9 +8,9 @@ I'm looking forward to an exciting year as we take the second generation robot c
 
 ## Resources
 
-- Please send your GitHub username or email Discord to the Mech Warfare lead or in #mech-warfare-general for access to the code so far.
 - [Flyer from today (PDF)](MechWarfareFlyer2023_v1.pdf)
 - [Presentation from today (PDF)]()
+- [GitHub Repository](https://github.com/BobSaidHi/CPRC-MechWarfare)
 
 <br>
 <br>
