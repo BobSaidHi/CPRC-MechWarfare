@@ -8,7 +8,7 @@ I'm looking forward to an exciting year as we take the second generation robot c
 
 ## Resources and Related Websites
 
-- [Flyer from today (PDF)](MechWarfareFlyer2023_v1.pdf)
+- [Flyer from today (PDF)](MechWarfareFlyer2023.pdf)
 - [Presentation from today (PDF)]()
 - [GitHub Repository](https://github.com/BobSaidHi/CPRC-MechWarfare)
 - [Cal Poly Team Website](https://www.calpolyrobotics.org/mech-warfare)

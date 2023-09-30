@@ -6,6 +6,6 @@ relative_links:
 include:
   - index.md
   - README.md
-  - MechWarfareFlyer2023_v1.pdf
+  - MechWarfareFlyer2023.pdf
   
 theme: jekyll-theme-cayman
