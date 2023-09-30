@@ -24,8 +24,10 @@ I'm looking forward to an exciting year as we take the second generation robot c
 > It's a bit messy right now, and the main branch is not up to date.
 
 - [GitHub Repository (Code)](https://github.com/BobSaidHi/CPRC-MechWarfare)
+- [List of tasks (Ping lead on Discord if you need access)](https://github.com/users/BobSaidHi/projects/3/views/1)
 
 <br>
 <br>
-_Last updated 2023-09-23T10:45PDT_
+
+_Last updated 2023-09-30T12:04PDT_
 
