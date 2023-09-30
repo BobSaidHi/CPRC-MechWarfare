@@ -13,8 +13,9 @@ I'm looking forward to an exciting year as we take the second generation robot c
 - [GitHub Repository](https://github.com/BobSaidHi/CPRC-MechWarfare)
 - [Cal Poly Team Website](https://www.calpolyrobotics.org/mech-warfare)
 - [RTeam Robotics Website](http://rteamrobotics.weebly.com/mech-warfare.html)
-- [Hackaday Article](https://hackaday.com/2019/06/07/mech-warfare-like-driving-a-building-sized-robot-through-a-busy-city/)
-- [IEEE Article](https://spectrum.ieee.org/video-mech-warfare-rocks-robogames-2012#toggle-gdpr)
+- [Hackaday Article w/ introduction video](https://hackaday.com/2019/06/07/mech-warfare-like-driving-a-building-sized-robot-through-a-busy-city/)
+- [IEEE Article w/ gameplay footage](https://spectrum.ieee.org/video-mech-warfare-rocks-robogames-2012)
+- [Official Instagram](https://www.instagram.com/mechwarfare/?hl=en)
 
 <br>
 <br>
