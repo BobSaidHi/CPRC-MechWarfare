@@ -7,5 +7,6 @@ include:
   - index.md
   - README.md
   - MechWarfareFlyer2023.pdf
+  - MechWarfarePresentation2023.pdf
   
 theme: jekyll-theme-cayman

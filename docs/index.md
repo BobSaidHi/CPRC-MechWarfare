@@ -9,7 +9,7 @@ I'm looking forward to an exciting year as we take the second generation robot c
 ## Welcome Handouts
 
 - [Flyer from today (PDF)](MechWarfareFlyer2023.pdf)
-- [Presentation from today (PDF)]()
+- [Presentation from today (PDF)](MechWarfarePresentation2023.pdf)
 
 ## Related Websites
 
