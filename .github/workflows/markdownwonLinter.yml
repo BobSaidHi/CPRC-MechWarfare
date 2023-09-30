@@ -1,0 +1,30 @@
+name: Markdown Linter
+on:
+  - push
+  - pull_request
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+
+jobs:
+  lint-changelog:
+    name: Lint markdown files
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v3
+
+    - name: Lint files
+      uses: docker://avtodev/markdown-lint:v1 # fastest way
+      with:
+        #rules: '.github/workflows/config/markdownlintConfig.js' #custom rules
+        config: '.github/workflows/config/markdownlintConfig.yml' #main config
+        ignore: 'pages/aboutPages.md' # multiple files must be separated with single space
+
+    # Or using current repository as action:
+
+#    - name: Lint changelog file
+#      uses: avto-dev/markdown-lint@v1
+ #     with:
+ #       rules: '/lint/rules/changelog.js'
+ #       config: '/lint/config/changelog.yml'
+ #       args: './'
