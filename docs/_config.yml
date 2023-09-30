@@ -4,32 +4,8 @@ relative_links:
   enabled: true
   collections: true
 include:
-  - advanced/characterization.md
-  - CODE_OF_CONDUCT.md
-  - CONTRIBUTING.md
-  - detailedSetup/genericVSCodeSetup.md
-  - Documents/TheBasicsOfGitHub.md
-  - driverStation/guides/atCompetition.md
-  - driverStation/guides/laptop.md
-  - driverStation/guides/postCompetition.md
-  - driverStation/guides/preCompetition.md
-  - driverStation/guides/template.md
-  - driverStation/guides/windows.md
-  - driverStation/maintenanceLogs/setupLog.md
-  - driverStation/overview.md
-  - gitHubAdmin/orgManagement/orgDiscount.md
-  - gitHubAdmin/orgManagement/orgOwners.md
-  - gitHubAdmin/orgManagement/teamCleanup.md
-  - gitHubAdmin/overview.md
-  - gitHubAdmin/people.md
-  - gitHubAdmin/quickGuides/membersQuickSetup.md
-  - gitHubAdmin/quickGuides/orgMaintenanceGuide.md
-  - gitHubAdmin/quickGuides/repositoryQuickSetup.md
-  - gitHubAdmin/repositories.md
-  - gitHubAdmin/settings.md
-  - gitHubAdmin/teams.md
-  - hardware/statusLights.md
   - index.md
   - README.md
+  - MechWarfareFlyer2023_v1.pdf
   
 theme: jekyll-theme-cayman
