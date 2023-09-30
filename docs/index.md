@@ -21,7 +21,7 @@ I'm looking forward to an exciting year as we take the second generation robot c
 
 ## Resources
 
-> It's a bit messy right, now and the main branch is not up to date.
+> It's a bit messy right now, and the main branch is not up to date.
 
 - [GitHub Repository (Code)](https://github.com/BobSaidHi/CPRC-MechWarfare)
 
