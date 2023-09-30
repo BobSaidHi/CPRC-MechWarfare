@@ -1,7 +1,9 @@
 # Welcome
 
 Hello,
-I'm looking for an exciting year as we take the second geneation robot chasis from last year and move forward with our own ideas and designs, eventually to return to the arena.  
+
+I'm looking forward to an exciting year as we take the second geneation robot chasis from last year and move forward with our own ideas and designs, eventually to return to the arena.
+
 -- Noah (Mech Warafre lead, Winter 2022 to present)
 
 ## Resources
