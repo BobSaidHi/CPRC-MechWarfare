@@ -8,7 +8,7 @@ I'm looking forward to an exciting year as we take the second geneation robot ch
 
 ## Resources
 
-- Please contact me on Discord for access to the code.
+- Please send your GitHub username or email Discord to the Mech Warfare lead or in #mech-warfare-general for access to the code so far.
 - [Presentation from today (PDF)]()
 - [Flyer from today (PDF)]()
 
